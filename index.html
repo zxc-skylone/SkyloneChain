@@ -7,8 +7,9 @@
   <title>Skylone Chain</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
   <meta name="description"
-        content="Skylone Chain - Private OSINT Mind-Mapping & Entity Graph
+    content="Skylone Chain - Private OSINT Mind-Mapping & Entity Graph
 Build complex investigation chains and visualize digital footprints directly in your browser. Fast, minimal, and privacy-focused." />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #050505;
@@ -19,8 +20,8 @@ Build complex investigation chains and visualize digital footprints directly in 
       --fg: #f2f2f2;
       --mut: #8d8d8d;
       --line: #e6e6e6;
-      --sel: #ffd24a;
-      --bad: #ff7b7b;
+      --sel: #ffffff;
+      --bad: #ffffff;
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top, 0px);
       padding-bottom: env(safe-area-inset-bottom, 0px)
@@ -43,7 +44,7 @@ Build complex investigation chains and visualize digital footprints directly in 
       --btn2: #4a4e57;
       --dot: #33363c;
       --line: #dcdcdc;
-      --sel: #ff9d5c
+      --sel: #ffffff;
     }
 
     * {
@@ -146,11 +147,11 @@ Build complex investigation chains and visualize digital footprints directly in 
     }
 
     .n[data-cf=med] .tx {
-      border-bottom: 1px dashed #ffd24a
+      border-bottom: 1px dashed #ffffff
     }
 
     .n[data-cf=high] .tx {
-      border-bottom: 1px solid #7ee787
+      border-bottom: 1px solid #ffffff
     }
 
     .n.sel {
@@ -699,7 +700,7 @@ Build complex investigation chains and visualize digital footprints directly in 
   <script>
     (function () {
       var KEY = "osint-chain-v2", ROW = 42, GAP = 66, uid = 1;
-      var TYPES = [["person", "Person", "#ffb86b"], ["user", "Username", "#c792ea"], ["mail", "Email", "#6fb1ff"], ["phone", "Phone", "#7ee787"], ["globe", "Domain", "#5eead4"], ["pin", "Location", "#ff7b7b"], ["image", "Media", "#f6e05e"], ["doc", "Document", "#a9b4c4"], ["org", "Organization", "#f78fb3"], ["dot", "Other", "#e6e6e6"]], TC = {};
+      var TYPES = [["person", "Person", "#ffffff"], ["user", "Username", "#ffffff"], ["mail", "Email", "#ffffff"], ["phone", "Phone", "#ffffff"], ["globe", "Domain", "#ffffff"], ["pin", "Location", "#ffffff"], ["image", "Media", "#ffffff"], ["doc", "Document", "#ffffff"], ["org", "Organization", "#ffffff"], ["dot", "Other", "#ffffff"]], TC = {};
       TYPES.forEach(function (t) {TC[t[0]] = t});
       var THEMES = ["black", "navy", "graphite"], TN = {black: "Black", navy: "Navy", graphite: "Graphite"};
       var S = {root: null, sel: null, theme: "black", name: "", q: ""}, view = {x: 80, y: 0, k: 1}, els = {}, hist = [], hi = -1, tm = null;
